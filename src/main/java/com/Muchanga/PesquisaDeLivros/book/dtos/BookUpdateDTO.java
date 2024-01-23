@@ -1,8 +1,10 @@
 package com.Muchanga.PesquisaDeLivros.book.dtos;
 
-import org.hibernate.validator.constraints.NotBlank;
+
 
 import java.sql.Date;
+
+import javax.validation.constraints.NotBlank;
 
 public record BookUpdateDTO(
 

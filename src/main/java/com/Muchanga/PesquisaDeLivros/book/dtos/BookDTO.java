@@ -1,13 +1,16 @@
 package com.Muchanga.PesquisaDeLivros.book.dtos;
 
-import com.Muchanga.PesquisaDeLivros.user.models.User;
-import jakarta.validation.constraints.NotBlank;
+
 
 import java.util.Date;
 
+import javax.validation.constraints.NotBlank;
+
+import com.Muchanga.PesquisaDeLivros.user.models.user.UserModel;
+
 
 public record BookDTO(
-        @NotBlank User user,
+        @NotBlank UserModel user,
         @NotBlank(message = "O titulo é obrigatório")String title,
         @NotBlank (message = "Nome do autor é obrigatório")String author,
         @NotBlank (message = "O genero é obrigatório")String genre,

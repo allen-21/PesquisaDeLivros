@@ -16,8 +16,8 @@ public class BookService {
     @Autowired
     private BookRepository bookRepository;
 
-    public List<Book> buscarTodos(){
-        return this.bookRepository.findAll();
+    public List<Book> getAllBooks(){
+        return bookRepository.findAll();
     }
     public List<Book> buscarPorGenero(String genre){
         return this.bookRepository.findByGenreIgnoreCase(genre);
@@ -39,7 +39,6 @@ public class BookService {
             existingBook.setAuthor(data.author());
             existingBook.setGenre(data.genre());
             existingBook.setDescription(data.description());
-            existingBook.setPublicationDate(data.publicationDate());
             existingBook.setPublicationYear(data.publicationYear());
 
 
